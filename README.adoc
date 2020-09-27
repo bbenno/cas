@@ -1,0 +1,4 @@
+CAS -- Call Administration Secretary
+====================================
+
+CAS is a call administration solution based on  https://rubyonrails.org[Rails].
