@@ -7,7 +7,7 @@ RSpec.describe Address, type: :model do
     end
 
     it 'ensures that street contains at least one number' do
-      address = Address.new(street_address: 'Long Hill Street').save
+      address = Address.new(street_address: Faker::Address.street_name).save
       expect(address).to eq(false)
     end
 
