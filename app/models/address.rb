@@ -1,3 +1,3 @@
 class Address < ApplicationRecord
-  validates :street, presence: true, format: { with: /\d+/, message: 'missing house number' }
+  validates :street_address, presence: true, format: { with: /\d+/, message: 'missing house number' }
 end

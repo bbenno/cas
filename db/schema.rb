@@ -14,13 +14,14 @@ ActiveRecord::Schema.define(version: 2020_10_02_201122) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "co_name"
-    t.string "street"
+    t.string "street_address"
     t.string "city"
-    t.string "zipcode"
-    t.string "country", limit: 2
+    t.string "zip_code"
+    t.string "country_code", limit: 2
     t.string "label"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["country_code"], name: "index_addresses_on_country_code"
   end
 
 end
