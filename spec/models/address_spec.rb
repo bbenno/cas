@@ -1,5 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Address, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context 'validations' do
+    it 'ensures the presence of street' do
+      address = Address.new(street: '').save
+      expect(address).to eq(false)
+    end
+  end
 end
