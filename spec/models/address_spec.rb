@@ -26,5 +26,10 @@ RSpec.describe Address, type: :model do
     it 'ensures that country_code has length of two' do
       should validate_length_of(:country_code).is_equal_to(2)
     end
+
+    it 'ensures that country_code is valid ISO3166 code' do
+      address = build(:address, country_code: 'ZZ')
+      expect(address.valid?).to eq(false)
+    end
   end
 end
