@@ -30,10 +30,11 @@ ActiveRecord::Schema.define(version: 2020_10_02_230351) do
   create_table "companies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name", null: false
     t.string "description"
-    t.string "homepage"
+    t.string "homepage_url"
     t.text "note"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["name"], name: "index_companies_on_name", unique: true
   end
 
 end
