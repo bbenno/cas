@@ -5,6 +5,7 @@ class CreateCompanies < ActiveRecord::Migration[6.0]
       t.string :description
       t.string :homepage_url
       t.text :note
+      t.integer :status
 
       t.timestamps
     end

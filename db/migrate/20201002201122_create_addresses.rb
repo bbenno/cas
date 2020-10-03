@@ -7,7 +7,7 @@ class CreateAddresses < ActiveRecord::Migration[6.0]
       t.string :zip_code
       t.string :country_code, limit: 2
       t.string :label, null: true
-      t.belongs_to :addressable, polymorphic: true, index: { unique: true }, foreign_key: true
+      t.belongs_to :addressable, polymorphic: true, index: { unique: true }
 
       t.index :country_code
 

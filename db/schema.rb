@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 2020_10_02_230351) do
     t.bigint "addressable_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable_type_and_addressable_id"
+    t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable_type_and_addressable_id", unique: true
     t.index ["country_code"], name: "index_addresses_on_country_code"
   end
 
@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2020_10_02_230351) do
     t.string "description"
     t.string "homepage_url"
     t.text "note"
+    t.integer "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["name"], name: "index_companies_on_name", unique: true
