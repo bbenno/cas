@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2020_10_02_230351) do
   end
 
   create_table "companies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
-    t.string "name", null: false
+    t.string "name"
     t.string "description"
     t.string "homepage_url"
     t.text "note"
