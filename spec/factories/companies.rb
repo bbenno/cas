@@ -5,5 +5,6 @@ FactoryBot.define do
     homepage_url { Faker::Internet.url }
     address
     note { Faker::Lorem.paragraphs(number: 2) }
+    email { Faker::Internet.email }
   end
 end

@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 2020_10_02_230351) do
     t.string "homepage_url"
     t.text "note"
     t.integer "status"
+    t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["name"], name: "index_companies_on_name", unique: true

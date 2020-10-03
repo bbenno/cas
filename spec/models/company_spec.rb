@@ -1,8 +1,10 @@
 require 'rails_helper'
 require_relative '../support/concerns/letterable'
+require_relative '../support/concerns/mailable'
 
 RSpec.describe Company, type: :model do
   it_behaves_like :letterable
+  it_behaves_like :mailable
 
   subject { build(:company, :active) }
 
