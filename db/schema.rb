@@ -19,8 +19,11 @@ ActiveRecord::Schema.define(version: 2020_10_02_201122) do
     t.string "zip_code"
     t.string "country_code", limit: 2
     t.string "label"
+    t.string "addressable_type"
+    t.bigint "addressable_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["addressable_type", "addressable_id"], name: "index_addresses_on_addressable_type_and_addressable_id"
     t.index ["country_code"], name: "index_addresses_on_country_code"
   end
 

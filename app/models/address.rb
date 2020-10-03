@@ -3,4 +3,7 @@ class Address < ApplicationRecord
   validates :city, presence: true
   validates :zip_code, presence: true
   validates :country_code, presence: true, length: { is: 2 }, inclusion: { in: ISO3166::Country.all.map(&:alpha2) }
+  #validates :addressable, presence: true
+
+  belongs_to :addressable, polymorphic: true
 end

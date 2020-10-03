@@ -31,5 +31,7 @@ RSpec.describe Address, type: :model do
       address = build(:address, country_code: 'ZZ')
       expect(address.valid?).to eq(false)
     end
+
+    it { should belong_to(:addressable) }
   end
 end
