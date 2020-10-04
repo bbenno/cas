@@ -94,6 +94,9 @@ GEM
     ffi (1.13.1-x64-mingw32)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    haml (5.2.0)
+      temple (>= 0.8.0)
+      tilt
     i18n (1.8.5)
       concurrent-ruby (~> 1.0)
     i18n_data (0.10.0)
@@ -193,6 +196,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    temple (0.8.2)
     thor (1.0.1)
     thread_safe (0.3.6)
     tilt (2.0.10)
@@ -235,6 +239,7 @@ DEPENDENCIES
   database_cleaner-active_record
   factory_bot_rails
   faker
+  haml
   jbuilder (~> 2.7)
   mysql2 (>= 0.4.4)
   puma (~> 4.1)
