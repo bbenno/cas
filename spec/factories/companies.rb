@@ -4,7 +4,8 @@ FactoryBot.define do
     description { Faker::Lorem.sentence }
     homepage_url { Faker::Internet.url }
     address
-    note { Faker::Lorem.paragraphs(number: 2) }
+    note { Faker::Lorem.paragraphs }
     email { Faker::Internet.email }
+    industry { Faker::Company.industry }
   end
 end
