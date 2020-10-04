@@ -6,5 +6,7 @@ RSpec.describe Person, type: :model do
 
   context 'validations' do
     it { should validate_presence_of(:name) }
+    it { should belong_to(:company) }
+    # it { should_not allow_value(Faker::Date.forward).for(:date_of_birth) }
   end
 end

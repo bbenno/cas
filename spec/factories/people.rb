@@ -1,11 +1,11 @@
 FactoryBot.define do
   factory :person do
-    name { "MyString" }
-    company { nil }
-    phone { "MyString" }
-    address { nil }
-    date_of_birth { "2020-10-04" }
-    note { "MyText" }
-    role { "MyString" }
+    name { Faker::Name.name }
+    company
+    phone { Faker::PhoneNumber.phone_number }
+    address
+    date_of_birth { Faker::Date.birthday }
+    note { Faker:Lorem.paragraph }
+    role { nil }
   end
 end
