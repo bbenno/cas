@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_10_04_134740) do
+ActiveRecord::Schema.define(version: 2020_10_04_145844) do
 
   create_table "addresses", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "co_name"
@@ -39,6 +39,18 @@ ActiveRecord::Schema.define(version: 2020_10_04_134740) do
     t.index ["name"], name: "index_companies_on_name", unique: true
   end
 
+  create_table "people", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
+    t.string "name"
+    t.bigint "company_id", null: false
+    t.string "phone"
+    t.date "date_of_birth"
+    t.text "note"
+    t.string "role"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["company_id"], name: "index_people_on_company_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "password_digest"
     t.string "name", null: false
@@ -49,4 +61,5 @@ ActiveRecord::Schema.define(version: 2020_10_04_134740) do
     t.index ["name"], name: "index_users_on_name", unique: true
   end
 
+  add_foreign_key "people", "companies"
 end
