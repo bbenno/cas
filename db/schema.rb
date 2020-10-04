@@ -31,13 +31,16 @@ ActiveRecord::Schema.define(version: 2020_10_04_145844) do
   create_table "companies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.string "description"
+    t.string "industry"
     t.string "homepage_url"
     t.text "note"
     t.integer "status"
     t.string "email"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["industry"], name: "index_companies_on_industry"
     t.index ["name"], name: "index_companies_on_name", unique: true
+    t.index ["status"], name: "index_companies_on_status"
   end
 
   create_table "people", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
