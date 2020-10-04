@@ -46,14 +46,15 @@ ActiveRecord::Schema.define(version: 2020_10_04_145844) do
   create_table "people", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.bigint "company_id", null: false
+    t.bigint "company_id"
     t.string "phone"
     t.date "date_of_birth"
     t.text "note"
-    t.string "role"
+    t.string "role", comment: "role in company"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["company_id"], name: "index_people_on_company_id"
+    t.index ["name"], name: "index_people_on_name"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
