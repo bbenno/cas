@@ -9,7 +9,7 @@ RSpec.describe Address, type: :model do
     it { should validate_presence_of(:zip_code) }
     it { should validate_presence_of(:country_code) }
     it { should validate_length_of(:country_code).is_equal_to(2) }
-    it { should belong_to(:addressable) }
+    it { should belong_to(:letterable) }
 
     it 'ensures that street contains at least one number' do
       subject.street_address = Faker::Address.street_name
