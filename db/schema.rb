@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2020_10_04_145844) do
     t.string "street_address"
     t.string "city"
     t.string "zip_code"
+    t.string "state"
     t.string "country_code", limit: 2
     t.string "label"
     t.string "letterable_type"
@@ -24,7 +25,7 @@ ActiveRecord::Schema.define(version: 2020_10_04_145844) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["country_code"], name: "index_addresses_on_country_code"
-    t.index ["letterable_type", "letterable_id"], name: "index_addresses_on_letterable_type_and_letterable_id", unique: true
+    t.index ["letterable_type", "letterable_id"], name: "index_addresses_on_letterable_type_and_letterable_id"
   end
 
   create_table "companies", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci", force: :cascade do |t|
