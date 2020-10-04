@@ -4,5 +4,5 @@ class Address < ApplicationRecord
   validates :zip_code, presence: true
   validates :country_code, presence: true, length: { is: 2 }, inclusion: { in: ISO3166::Country.all.map(&:alpha2) }
 
-  belongs_to :addressable, polymorphic: true
+  belongs_to :letterable, polymorphic: true
 end

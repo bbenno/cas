@@ -5,11 +5,9 @@ class CreateAddresses < ActiveRecord::Migration[6.0]
       t.string :street_address
       t.string :city
       t.string :zip_code
-      t.string :country_code, limit: 2
+      t.string :country_code, limit: 2, index: true
       t.string :label, null: true
       t.belongs_to :letterable, polymorphic: true, index: { unique: true }
-
-      t.index :country_code
 
       t.timestamps
     end
