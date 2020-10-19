@@ -47,3 +47,12 @@ This allows better preparation of subsequent calls as well as call backs.
 . Internationalization +
   The language of the text as well as time and number formats have to be adjustable for the user.
   At least German (DE-de) and English (EN-us) must be supported.
+. Usability
+  * It takes at most two clicks to get from the startpage to the input form to create a new call log.
+. Security +
+  _tbd_
+. Performance +
+  _tbd_
+. Availability
+  _tbd_
+. 
