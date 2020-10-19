@@ -1,0 +1,49 @@
+= CAS
+Benno Bielmeier <benno.bielmeier@st.othr.de>
+v1.0, 2020-10-19
+
+CAS ("`Call Administration Secretary`") is a web-based call management software.
+It focuses on telephonic accquisition in commercial circumstances.
+
+== Motivation
+
+The main purpose of the tool is to provide an simple and structred way of logging statements, agreements and metadatafootnote:[caller, callee, company, phone number,...] about a phone call as well as a simple way to look up that data.
+This allows better preparation of subsequent calls as well as call backs.
+
+== Context of the system
+
+* The system is by default stand-alone.
+* It is possible to import contact data from an external database.
+
+== Glossary
+
+== Stakholder
+
+. Caller (_User_)
+. Callee
+. Sales department
+
+== Use-Case (functional requirements)
+=== Log call
+
+.Precondition
+* User is logged in.
+
+.Postcondition
+* Inserted data is stored and indexed.
+
+=== Show timeline of calls to/from company
+
+=== Show timeline of calls to/from certain person
+
+=== Show timeline of calls to/from certain phone number
+
+=== Show log of certain call
+
+=== Export log of certain call as PDF
+
+== Non-functional requirements
+
+. Internationalization +
+  The language of the text as well as time and number formats have to be adjustable for the user.
+  At least German (DE-de) and English (EN-us) must be supported.
