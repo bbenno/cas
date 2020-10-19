@@ -53,6 +53,7 @@ This allows better preparation of subsequent calls as well as call backs.
   _tbd_
 . Performance +
   _tbd_
-. Availability
+. Availability +
   _tbd_
-. 
+. Interoperability +
+  The system has to be usable/available for commercially availabe computer systems with a well-established desktop environment with a supported HTML5-compatible browser.
